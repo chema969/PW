@@ -18,8 +18,14 @@
     echo '<tr><td><a href="datosEmpleados.php?id='.urlencode($dato["id"]).'"/>'.$dato["nombre"].'</td>'.'<td>'.$dato["id"].'</td></tr>';
     }
  echo'</table>';
+ echo '<div align="center">' ;
 echo'<form action="formulario.php">
     <input align="center" type="submit" value="Añadir usuario" />
 </form>';
+
+echo '<form action="eliminar.php">
+    <input align="center" type="submit" value="Eliminar usuario" />
+</form>
+</div>';
 
 ?>
