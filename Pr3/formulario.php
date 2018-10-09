@@ -20,7 +20,7 @@
         Correo:<br>
         <input type="email" name="correo" ><br>
 
-        <input type="submit" value="Introducir">
+        <input name="submit "type="submit" value="Introducir">
 
        </form>
    <form action="main.php">
@@ -36,18 +36,21 @@
  * Date: 3/10/18
  * Time: 22:29
  */
- $empleado=new Empleado($_GET["nombre"],$_GET["apellidos"],$_GET["dni"]);
- if($_GET["nombre"]!="") {
-     $consultas = new EmpresaConsultas();
-     $empleado->setId($consultas->getMaxId() + 1);
-     $empleado->setCargo($_GET["cargo"]);
-     $empleado->setCorreo($_GET["correo"]);
-     if ($consultas->addUser($empleado)) {
-         echo 'Usuario añadido';
-     } else {
-         echo 'Usuario No AÑADIDO';
-     }
-     header("Location:main.php");
-     die();
- }
+
+
+    if($_GET['nombre']!=""){
+        $empleado=new Empleado($_GET['nombre'],$_GET['apellidos'],$_GET['dni']);
+        $consultas = new EmpresaConsultas();
+        $empleado->setId($consultas->getMaxId() + 1);
+        $empleado->setCargo($_GET["cargo"]);
+        $empleado->setCorreo($_GET["correo"]);
+        if ($consultas->addUser($empleado)) {
+            echo 'Usuario añadido';
+        } else {
+            echo 'Usuario No AÑADIDO';
+        }
+        header("Location:main.php");
+        die();
+    }
+
 ?>
