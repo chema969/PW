@@ -40,15 +40,15 @@ public function dbconnect(){
  }
 
 
- public function getTrabajador($datosEntrada){
-     $data=array();
-     $sentence=$this->conex->prepare("select * from empleados where id=".$datosEntrada.";" );
-     if ($sentence->execute()) {
-         while ($row = $sentence->fetch()) {
-             $data[] = $row;
-         }
-     }
-     return $data;
- }
+    public function getTrabajador($datosEntrada)
+    {
+        $sentence = $this->conex->prepare("select * from empleados where id=" . $datosEntrada . ";");
+        if ($sentence->execute()) {
+            while ($row = $sentence->fetch()) {
+                $data = $row;
+            }
+        }
+        return $data;
+    }
 
 }
