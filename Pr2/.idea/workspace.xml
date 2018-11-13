@@ -25,29 +25,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="datosEmpleados.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="datosEmpleados.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/datosEmpleados.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+            <state relative-caret-position="45">
+              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-            </state>
-          </provider>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="EmpresaConsultas.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EmpresaConsultas.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="345">
+              <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
               <folding>
                 <element signature="e#6#87#0#PHP" expanded="true" />
               </folding>
@@ -62,8 +58,8 @@
       <list>
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.php" />
         <option value="$PROJECT_DIR$/EmpresaConsultas.php" />
-        <option value="$PROJECT_DIR$/datosEmpleados.php" />
         <option value="$PROJECT_DIR$/main.php" />
+        <option value="$PROJECT_DIR$/datosEmpleados.php" />
       </list>
     </option>
   </component>
@@ -87,7 +83,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -99,6 +94,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -140,20 +136,21 @@
       <workItem from="1538595188330" duration="38000" />
       <workItem from="1538595489066" duration="1975000" />
       <workItem from="1538598381760" duration="267000" />
+      <workItem from="1540912865184" duration="1684000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17955000" />
+    <option name="totallyTimeSpent" value="19639000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
+    <frame x="-1" y="24" width="1922" height="1037" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005208" side_tool="true" visible="true" weight="0.32912722" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005208" side_tool="true" visible="true" weight="0.32829374" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
@@ -166,9 +163,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +180,23 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/datosEmpleados.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EmpresaConsultas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/datosEmpleados.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -200,13 +214,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/main.php" />
     <entry file="file://$PROJECT_DIR$/datosEmpleados.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -214,13 +222,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="95" selection-start-line="13" selection-start-column="80" selection-end-line="13" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/main.php" />
     <entry file="file://$PROJECT_DIR$/EmpresaConsultas.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -238,13 +240,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="95" selection-start-line="13" selection-start-column="80" selection-end-line="13" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/main.php" />
     <entry file="file://$PROJECT_DIR$/EmpresaConsultas.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -255,41 +251,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.php" />
+    <entry file="file://$PROJECT_DIR$/formulario.php" />
+    <entry file="file://$PROJECT_DIR$/main.php" />
     <entry file="file://$PROJECT_DIR$/EmpresaConsultas.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="345">
+          <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
           <folding>
             <element signature="e#6#87#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/formulario.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/datosEmpleados.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="45">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
         </state>
       </provider>
     </entry>

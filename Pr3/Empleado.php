@@ -67,7 +67,9 @@ public function getId(){
      */
     public function setCargo($cargo)
     {
+
         $this->cargo = $cargo;
+
     }
 
     /**

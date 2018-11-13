@@ -27,21 +27,24 @@ Correo:<br>
         <input type="submit" value="Introducir">
         </form>';
 
-$empleado=new Empleado($_GET["nombre"],$_GET["apellidos"],$_GET["dni"]);
-if($_GET["nombre"]!="") {
-    $empleado->setId($_GET["id"]);
-    $empleado->setCargo($_GET["cargo"]);
-    $empleado->setCorreo($_GET["correo"]);
-    $empleado->printEmpleado();
-    if ($consultas->updateUser($empleado)) {
-        echo 'Usuario modificado';
-    } else {
-        echo 'Usuario No AÑADIDO';
-    }
-    if($_GET["done"]=="true") {
-        header("Location:main.php");
-        die();
-    }
+
+if(isset($_GET['nombre'])){
+    if($_GET['nombre']!="") {
+        $empleado=new Empleado($_GET["nombre"],$_GET["apellidos"],$_GET["dni"]);
+        $empleado->setId($_GET["id"]);
+        $empleado->setCargo($_GET["cargo"]);
+        $empleado->setCorreo($_GET["correo"]);
+        $empleado->printEmpleado();
+        if ($consultas->updateUser($empleado)) {
+            echo 'Usuario modificado';
+      } else {
+            echo 'Usuario No AÑADIDO';
+        }
+     if ($_GET["done"] == "true") {
+            header("Location:index.php");
+            die();
+     }
+}
 }
 
 ?>

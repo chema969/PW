@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <title>Pagina principal</title>
 </head>
+ <p align="right"> <a href="crearUsuario.php">Crear Usuario</a>    <a href="crearUsuario.php">Entrar</a></p>
  <h1 align="center">EMPLEADOS</h1>
  <table border="3" align="center" >
       <tr>

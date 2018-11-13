@@ -12,9 +12,9 @@
         Usuario:<br>
         <input name="usuario" type="text"    /><br>
         Contraseña:<br>
-        <input name="pass" type="text"    /><br>
+        <input name="pass" type="password"    /><br>
         Repetir contraseña:<br>
-        <input name="pass2" type="text"    /><br>
+        <input name="pass2" type="password"    /><br>
         Nombre:<br>
         <input name="nombre" type="text"    /><br>
         Apellidos:<br>
@@ -55,6 +55,7 @@ if(isset($_GET['usuario'])and isset($_GET['pass']) and isset($_GET['pass2'])and 
             $user->setNombre($_GET['nombre']);
             $user->setTelefono($_GET['telefono']);
             $user->setCorreo($_GET['correo']);
+            $consult->addNombre($user);
         }
     }
 

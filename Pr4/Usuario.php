@@ -92,7 +92,8 @@ class Usuario
      */
     public function setPassword($password)
     {
-        $this->password = $password;
+        $hash=password_hash($password, PASSWORD_DEFAULT);
+        $this->password = $hash;
     }
 
     /**

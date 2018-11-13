@@ -13,26 +13,27 @@
  * Date: 4/10/18
  * Time: 19:18
  */
-
-echo'<body>
+?>
+<body>
 <h2>Elije usuaro a eliminar</h2>
-<form>';
-
+<form>
+<?php
 $consultas= new EmpresaConsultas();
 $datosConsulta=$consultas->getdata();
 foreach ($datosConsulta as $dato){
     echo '<input type="radio" name="id" value='.$dato["id"]. '>'.$dato["nombre"].' ' .$dato["apellidos"] . '<br>';
 }
-
-echo '<input type="submit" value="Borrar usuario">
+?>
+<input type="submit" value="Borrar usuario">
 </form>
-</body>';
-echo '<form action="main.php">
+</body>
+<form action="index.php">
     <input align="center" type="submit" value="Volver atrás" />
-</form>';
-if($_GET["id"]!="") {
+</form>
+<?php
+if(isset($_GET["id"])) {
     $consultas->eraseUser($_GET["id"]);
-    header("Location:main.php");
+    header("Location:index.php");
     die();
 }
 ?>

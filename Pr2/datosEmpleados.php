@@ -6,6 +6,7 @@
  * Date: 3/10/18
  * Time: 19:56
  */
+//hola
   $datos= new EmpresaConsultas();
   $dato=$datos->getTrabajador($_GET["id"]);
 

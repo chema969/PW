@@ -29,7 +29,7 @@ echo '<form action="modificar_datos.php">
     <input type="hidden" name="id" value="'.$dato["id"].'" />
     <input type="submit" value="Modificar datos" />
 </form><br>';
-echo '<form action="main.php">
+echo '<form action="index.php">
     <input type="submit" value="Volver al listado" />
 </form>
 </body>';
