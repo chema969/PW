@@ -12,9 +12,9 @@ class Usuario
     private $password;
     private $nombre;
     private $apellidos;
-    private $telefono;
     private $correo;
-
+    private $privilegios;//0=usuario mundano, 1=privilegiado, 2=administrador
+//mysql> create table usuarios (usuario varchar(255),nombre varchar(255), apellidos varchar(255),password varchar(255),telefono int(10),correo varchar(255),privilegios int(2));
     /**
      * @return mixed
      */
@@ -47,13 +47,7 @@ class Usuario
         return $this->password;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getTelefono()
-    {
-        return $this->telefono;
-    }
+
 
     /**
      * @return mixed
@@ -63,6 +57,13 @@ class Usuario
         return $this->usuario;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getPrivilegios()
+    {
+        return $this->privilegios;
+    }
     /**
      * @param mixed $apellidos
      */
@@ -96,13 +97,8 @@ class Usuario
         $this->password = $hash;
     }
 
-    /**
-     * @param mixed $telefono
-     */
-    public function setTelefono($telefono)
-    {
-        $this->telefono = $telefono;
-    }
+
+
 
     /**
      * @param mixed $usuario
@@ -110,5 +106,13 @@ class Usuario
     public function setUsuario($usuario)
     {
         $this->usuario = $usuario;
+    }
+
+    /**
+     * @param mixed $privilegios
+     */
+    public function setPrivilegios($privilegios)
+    {
+        $this->privilegios = $privilegios;
     }
 }

@@ -50,6 +50,7 @@
             } else {
                 echo 'Usuario No AÑADIDO';
             }
+
             header("Location:index.php");
             die();
 

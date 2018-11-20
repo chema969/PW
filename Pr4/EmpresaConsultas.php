@@ -115,9 +115,9 @@ WHERE id =' . $empleado->getId() . ';');
 
     public function addNombre(Usuario $empleado)
     {
-        $sentence = $this->conex->prepare('insert into usuarios(id,nombre,apellidos,dni,sueldo,correo, cargo)
-     value(' . $empleado->getId() . ',"' . $empleado->getNombre() . '","' . $empleado->getApellidos() . '","' . $empleado->getDni() . '",' . $empleado->getSueldo() . ',"' . $empleado->getCorreo() . '","' . $empleado->getCargo() . '");');
-        if ($sentence->execute()) {
+        $sentence = $this->conex->prepare('insert into usuarios(usuario,nombre,apellidos,password,correo, privilegios)
+     value("' . $empleado->getUsuario() . '","' . $empleado->getNombre() . '","' . $empleado->getApellidos() . '","' . $empleado->getPassword() . '","' . $empleado->getCorreo() . '",' . $empleado->getPrivilegios() . ');');
+              if ($sentence->execute()) {
             return true;
         } else {
             return false;

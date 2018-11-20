@@ -19,8 +19,6 @@
         <input name="nombre" type="text"    /><br>
         Apellidos:<br>
         <input type="text" name="apellidos"  /> ><br>
-        Telefono:<br>
-        <input type="text" name="telefono" /><br>
         Correo:<br>
         <input type="email" name="correo" /><br>
 
@@ -53,9 +51,19 @@ if(isset($_GET['usuario'])and isset($_GET['pass']) and isset($_GET['pass2'])and 
             $user->setPassword($_GET['pass']);
             $user->setApellidos($_GET['apellidos']);
             $user->setNombre($_GET['nombre']);
-            $user->setTelefono($_GET['telefono']);
             $user->setCorreo($_GET['correo']);
-            $consult->addNombre($user);
+            $user->setPrivilegios(0);
+            if ($consult->addNombre($user)) {
+                echo 'Usuario añadido';
+            } else {
+                echo 'Usuario No AÑADIDO';
+            }
+
+            header("Location:index.php");
+            die();
+        }
+        else{
+            echo "YA EXISTE UN USUARIO CON ESE MISMO NOMBRE";
         }
     }
 
