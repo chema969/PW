@@ -101,16 +101,28 @@ WHERE id =' . $empleado->getId() . ';');
             return false;
         }
     }
+
     public function existeNombre($nombre){
-        $data = array();
-        $sentence = $this->conex->prepare('select * from usuarios where usuario='.$nombre .';');
+        $data = 0;
+        $sentence = $this->conex->prepare('select * from usuarios where usuario="'.$nombre .'";');
         if ($sentence->execute()) {
             while ($row = $sentence->fetch()) {
-                $data[] = $row;
+                $data = $row;
             }
         }
-        if(count($data)==0) return false;
+        if(count($data)==1) return false;
         else return true;
+    }
+    public function getNombre($nombre){
+
+        $sentence = $this->conex->prepare('select * from usuarios where usuario="'.$nombre .'";');
+        if ($sentence->execute()) {
+            while ($row = $sentence->fetch()) {
+                return $row;
+            }
+        }
+         return false;
+
     }
 
     public function addNombre(Usuario $empleado)
@@ -122,5 +134,17 @@ WHERE id =' . $empleado->getId() . ';');
         } else {
             return false;
         }
+    }
+    public function iniciarSesion($nombre,$pass){
+        $data=0;
+        $sentence = $this->conex->prepare('select * from usuarios where usuario="'.$nombre .'";');
+        if ($sentence->execute()) {
+            while ($row = $sentence->fetch()) {
+                $data = $row;
+            }
+        }
+        //password_verify($pass,$data["password"]);
+        if(password_verify($pass,$data["password"])) return true;
+        else return false;
     }
 }

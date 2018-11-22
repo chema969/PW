@@ -1,32 +1,41 @@
+<?php include "EmpresaConsultas.php"
 
-/**
+    /**
  * Created by PhpStorm.
  * User: i62cumuj
  * Date: 20/11/18
  * Time: 16:32
- */
+ */?>
+    <form>
+
 Usuario:<br>
         <input name="usuario" type="text"    /><br>
 Contraseña:<br>
         <input name="pass" type="password"    /><br>
 <input name="submit "type="submit" value="Introducir">
+        </form>
 
 <?php
 if(isset($_GET['usuario'])and isset($_GET['pass'])) {
     if ($_GET['usuario'] != ""and $_GET['pass']!="") {
-        $empleado = new Empleado($_GET['nombre'], $_GET['apellidos'], $_GET['dni']);
         $consultas = new EmpresaConsultas();
-        $empleado->setId($consultas->getMaxId() + 1);
-        $empleado->setCargo($_GET["cargo"]);
-        $empleado->setCorreo($_GET["correo"]);
-        if ($consultas->addUser($empleado)) {
-            echo 'Usuario añadido';
+
+        if ($consultas->iniciarSesion($_GET["usuario"],$_GET["pass"])!=0) {
+            session_start();
+            $userSessionInfo = $consultas->getNombre($_GET["usuario"]);
+            $_SESSION['username'] = $userSessionInfo['usuario'];
+            $_SESSION['name'] = $userSessionInfo['nombre'];
+            $_SESSION["correo"]= $userSessionInfo["correo"];
+            $_SESSION["apellidos"]= $userSessionInfo["apellidos"];
+            $_SESSION['privilegios'] = $userSessionInfo['privilegios'];
+            $_SESSION["expire"]= time()+3600;
+            header("Location:index.php");
+            die();
         } else {
-            echo 'Usuario No AÑADIDO';
+            echo 'PASSWORD INCORRECTA';
         }
 
-        header("Location:index.php");
-        die();
+
 
     }
 }

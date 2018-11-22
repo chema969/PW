@@ -6,6 +6,8 @@
  * Date: 3/10/18
  * Time: 19:56
  */
+  include "session.php";
+  $admin=iniciarSesion();
   $datos= new EmpresaConsultas();
   $dato=$datos->getTrabajador($_GET["id"]);
 
@@ -25,10 +27,12 @@ echo '<body>';
     <li><strong>Correo:</strong>' . $dato["correo"] . '</li>
     <li><strong>Sueldo:</strong>' . $dato["sueldo"] . '</li>
 </ul>';
-echo '<form action="modificar_datos.php">
-    <input type="hidden" name="id" value="'.$dato["id"].'" />
+    if($admin>0) {
+        echo '<form action="modificar_datos.php">
+    <input type="hidden" name="id" value="' . $dato["id"] . '" />
     <input type="submit" value="Modificar datos" />
 </form><br>';
+    }
 echo '<form action="index.php">
     <input type="submit" value="Volver al listado" />
 </form>

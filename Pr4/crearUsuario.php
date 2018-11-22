@@ -1,5 +1,9 @@
 <?php include "Usuario.php"?>
-<?php include "EmpresaConsultas.php"?>
+<?php include "EmpresaConsultas.php";
+    include "session.php";
+$admin=iniciarSesion();
+?>
+
 <head>
     <meta charset="utf-8">
     <title> Crear Usuario </title>
@@ -18,7 +22,7 @@
         Nombre:<br>
         <input name="nombre" type="text"    /><br>
         Apellidos:<br>
-        <input type="text" name="apellidos"  /> ><br>
+        <input type="text" name="apellidos"  /> <br>
         Correo:<br>
         <input type="email" name="correo" /><br>
 
@@ -45,7 +49,7 @@ if(isset($_GET['usuario'])and isset($_GET['pass']) and isset($_GET['pass2'])and 
     }
     else{
         $consult=new EmpresaConsultas();
-        if(!$consult->existeNombre($_GET['nombre'])) {
+        if(!$consult->existeNombre($_GET['usuario'])) {
             $user = new Usuario();
             $user->setUsuario($_GET['usuario']);
             $user->setPassword($_GET['pass']);
@@ -59,7 +63,7 @@ if(isset($_GET['usuario'])and isset($_GET['pass']) and isset($_GET['pass2'])and 
                 echo 'Usuario No AÑADIDO';
             }
 
-            header("Location:index.php");
+           header("Location:index.php");
             die();
         }
         else{

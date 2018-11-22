@@ -1,4 +1,6 @@
-<?php include "EmpresaConsultas.php"?>
+<?php include "EmpresaConsultas.php";
+include "session.php";
+$admin=iniciarSesion();?>
 
 <head>
 <meta charset="utf-8">
