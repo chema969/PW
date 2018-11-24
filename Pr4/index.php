@@ -42,6 +42,9 @@ else{
      echo '<div align="center">';
      echo '<form action="admin.php">
     <input align="center" type="submit" value="Modificar propiedades de administración" />
+</form>
+<form action="peticiones.php">
+    <input align="center" type="submit" value="Aceptar peticiones" />
 </form></div>';
  }
 ?>

@@ -89,7 +89,6 @@ class EmpresaConsultas
         }
     }
 
-
     public function updateUser(Empleado $empleado)
     {
         $sentence = $this->conex->prepare('UPDATE empleados
@@ -146,5 +145,33 @@ WHERE id =' . $empleado->getId() . ';');
         //password_verify($pass,$data["password"]);
         if(password_verify($pass,$data["password"])) return true;
         else return false;
+    }
+    public function getdataUsuarios(){
+        $data = array();
+        $sentence = $this->conex->prepare("select * from usuarios order by privilegios asc;");
+        if ($sentence->execute()) {
+            while ($row = $sentence->fetch()) {
+                $data[] = $row;
+            }
+        }
+        return $data;
+    }
+    public function cambiarPrivilegios($nombre, $privilegios){
+        $sentence = $this->conex->prepare('UPDATE usuarios set privilegios='.$privilegios .' where usuario="'.$nombre .'";');
+        //echo 'UPDATE usuarios set privilegios='.$privilegios .' where usuario="'.$nombre .'";';
+        if ($sentence->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function addPeticion($id,$sueldonuevo,$sueldo,$usuario){
+        $sentence = $this->conex->prepare('insert into peticionSueldo(nuevosueldo,viejosueldo,id,usuario) value ('.$sueldonuevo.','.$sueldo.','.$id.',"'.$usuario.'")');
+        if ($sentence->execute()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
