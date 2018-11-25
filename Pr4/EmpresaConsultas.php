@@ -174,4 +174,44 @@ WHERE id =' . $empleado->getId() . ';');
             return false;
         }
     }
+    public function getPet($id)
+    {
+        $data = 0;
+        $sentence = $this->conex->prepare('select * from peticionSueldo where id='.$id.';');
+        if ($sentence->execute()) {
+            while ($row = $sentence->fetch()) {
+                $data = $row;
+            }
+        }
+        else{return false;}
+        if($data==0){return false;}
+        return $data;
+    }
+    public function getPeticiones()
+    {
+        $data = array();
+        $sentence = $this->conex->prepare("select * from peticionSueldo order by id asc;");
+        if ($sentence->execute()) {
+            while ($row = $sentence->fetch()) {
+                $data[] = $row;
+            }
+        }
+        return $data;
+    }
+    public function nuevoSueldo($id,$sueldo){
+        $sentence = $this->conex->prepare('Update empleados set sueldo='.$sueldo.' where id='.$id.';');
+        if ($sentence->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public function borrarPeticion($id){
+        $sentence = $this->conex->prepare("delete from peticionSueldo where id=" . $id);
+        if ($sentence->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

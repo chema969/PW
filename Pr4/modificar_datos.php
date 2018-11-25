@@ -39,7 +39,12 @@ if(isset($_GET['nombre'])){
         $empleado->setCargo($_GET["cargo"]);
         $empleado->setCorreo($_GET["correo"]);
         if($_GET["sueldo"]!=$datos["sueldo"]) {
-            $consultas->addPeticion($_GET["id"], $_GET["sueldo"],$datos["sueldo"], $_SESSION["username"]);
+            if ($consultas->getPet($_GET["id"])==false) {
+                $consultas->addPeticion($_GET["id"], $_GET["sueldo"], $datos["sueldo"], $_SESSION["username"]);
+            }
+            else{
+                echo "HAY UNA CONSULTA ACTUALMENTE";
+            }
         }
         if ($consultas->updateUser($empleado)) {
             echo 'Usuario modificado';
