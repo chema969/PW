@@ -8,17 +8,18 @@
  */
   include "session.php";
   $admin=iniciarSesion();
-  $datos= new EmpresaConsultas();
-  $dato=$datos->getTrabajador($_GET["id"]);
+  if($admin>0) {
+      $datos = new EmpresaConsultas();
+      $dato = $datos->getTrabajador($_GET["id"]);
 
-    echo '<head> 
+      echo '<head> 
      <meta charset="utf-8">
-     <title>'.
-    $dato["nombre"] .'  '. $dato["apellidos"].'</title>';
+     <title>' .
+          $dato["nombre"] . '  ' . $dato["apellidos"] . '</title>';
 
-echo '<body>';
-    echo '<h1>' . $dato["nombre"] .' '.$dato["apellidos"]. '</h1>';
-    echo '<ul>
+      echo '<body>';
+      echo '<h1>' . $dato["nombre"] . ' ' . $dato["apellidos"] . '</h1>';
+      echo '<ul>
     <li><strong>Nombre:</strong>' . $dato["nombre"] . '</li>
     <li><strong>Apellidos:</strong>' . $dato["apellidos"] . '</li>
     <li><strong>ID:</strong>' . $dato["id"] . '</li>
@@ -27,14 +28,19 @@ echo '<body>';
     <li><strong>Correo:</strong>' . $dato["correo"] . '</li>
     <li><strong>Sueldo:</strong>' . $dato["sueldo"] . '</li>
 </ul>';
-    if($admin>0) {
-        echo '<form action="modificar_datos.php">
+      if ($admin > 0) {
+          echo '<form action="modificar_datos.php">
     <input type="hidden" name="id" value="' . $dato["id"] . '" />
     <input type="submit" value="Modificar datos" />
 </form><br>';
-    }
-echo '<form action="index.php">
+      }
+      echo '<form action="index.php">
     <input type="submit" value="Volver al listado" />
 </form>
 </body>';
+  }
+  else{
+      header("Location:index.php");
+      die();
+  }
 ?>
